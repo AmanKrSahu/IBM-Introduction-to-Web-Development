@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>Web App - Simple Interest Calculator</title>
+    </head>
+    <body>
+        <div class="maindiv">
+            <p class="heading">Simple Interest Calculator</p>
+            <div class="maindivcontent">
+                <span>Amount</span>
+                <input style="margin-left: 55px; width: 200px;" type="number" id="principal" required="required"/>
+            </div>
+            <div class="maindivcontent">
+                <span>Rate </span>
+                <input style="margin-left: 80px;" type="range"  id="rate" min=1 max=20 step=0.25 value=10.25 onchange="updateRate()"/>
+                <span id="rate_val">10.25%</span>
+            </div>
+            <div class="maindivconent">
+                <span class="years">No. of Years </span>
+                <select id="years" style="margin-left: 15px;">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <div class="maindivcontent">
+                <button onclick="compute()">Compute Interest</button>
+                <span id="result"></span><br>
+            </div>
+            <footer>
+                &#169; Everyone Can Get Rich<br/>
+                This Calculator belongs to Aman Kumar Sahu
+            </footer>
+        </div>
+    </body>
+</html>
